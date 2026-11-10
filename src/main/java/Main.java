@@ -14,6 +14,20 @@ public class Main {
 
         System.out.println();
 
+        // Exercise 2 - Test Room Operations
+        System.out.println("--- Room Operations ---");
+
+        room.checkIn();
+        System.out.println("After check-in: " + room.isAvailable());
+
+        room.checkOut();
+        System.out.println("After check-out: " + room.isAvailable());
+
+        room.cleanRoom();
+        System.out.println("After cleaning: " + room.isAvailable());
+
+        System.out.println();
+
         // Test Reservation
         Reservation reservation = new Reservation("king", 3, true);
 
@@ -29,5 +43,19 @@ public class Main {
         System.out.println("Regular hours: " + employee.getRegularHours());
         System.out.println("Overtime hours: " + employee.getOvertimeHours());
         System.out.println("Total pay: " + employee.getTotalPay());
+
+
+
+        System.out.println();
+
+        System.out.println("--- Employee Time Tracking ---");
+
+        employee.punchIn(9);
+        employee.punchOut(17);
+
+        System.out.println("Regular hours: " + employee.getRegularHours());
+        System.out.println("Overtime hours: " + employee.getOvertimeHours());
+        System.out.println("Total pay: " + employee.getTotalPay());
+
     }
 }
