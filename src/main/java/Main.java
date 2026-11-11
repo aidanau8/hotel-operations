@@ -45,7 +45,6 @@ public class Main {
         System.out.println("Total pay: " + employee.getTotalPay());
 
 
-
         System.out.println();
 
         System.out.println("--- Employee Time Tracking ---");
@@ -56,7 +55,6 @@ public class Main {
         System.out.println("Regular hours: " + employee.getRegularHours());
         System.out.println("Overtime hours: " + employee.getOvertimeHours());
         System.out.println("Total pay: " + employee.getTotalPay());
-
 
 
         System.out.println();
@@ -76,6 +74,31 @@ public class Main {
 
         System.out.println("Hours after automatic punch: "
                 + employee2.getRegularHours());
+
+
+        // Exercise 3 - Hotel
+        System.out.println();
+
+        System.out.println("--- Hotel Booking ---");
+
+        Hotel hotel = new Hotel("Grand Hotel", 5, 10);
+
+        System.out.println("Available suites: " + hotel.getAvailableSuites());
+        System.out.println("Available rooms: " + hotel.getAvailableRooms());
+
+        boolean booked = hotel.bookRoom(2, true);
+
+        System.out.println("Booking successful: " + booked);
+        System.out.println("Available suites: " + hotel.getAvailableSuites());
+
+        boolean bookedRooms = hotel.bookRoom(3, false);
+
+        System.out.println("Basic room booking: " + bookedRooms);
+        System.out.println("Available rooms: " + hotel.getAvailableRooms());
+
+        // Test when not enough rooms are available
+        boolean extraBooking = hotel.bookRoom(5, true);
+        System.out.println("Extra booking successful: " + extraBooking);
 
     }
 }
